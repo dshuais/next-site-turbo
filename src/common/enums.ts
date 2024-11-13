@@ -6,7 +6,7 @@
  * @description: 枚举文件
  */
 
-export const APP_KEY = 'next-template';
+export const APP_KEY = 'next-site-turbo';
 
 export const TOKEN_KEY = `${APP_KEY}-token`;
 

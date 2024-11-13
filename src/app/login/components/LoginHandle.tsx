@@ -8,10 +8,10 @@
  */
 'use client';
 
-import { useAppStore } from '@/store';
 import { message } from 'antd';
-import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
+
+import useRouter from '@/hooks/useRouter';
 
 const ButtonCustom = styled.button`
   padding: 10px 20px;
@@ -28,14 +28,11 @@ const ButtonCustom = styled.button`
 
 export default function LoginHandle() {
 
-  const SET_TOKEN = useAppStore(state => state.SET_TOKEN);
-
-  const router = useRouter();
+  const { Login } = useRouter();
 
   function login() {
-    SET_TOKEN('new_token');
-    message.success('登陆成功');
-    router.replace('/');
+    Login('new_token');
+    message.success('Login Success');
   }
 
   return (
