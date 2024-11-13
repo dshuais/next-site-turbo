@@ -3,13 +3,12 @@
  * @Author: dushuai
  * @Date: 2024-04-16 14:41:04
  * @LastEditors: dushuai
- * @LastEditTime: 2024-04-19 17:47:45
+ * @LastEditTime: 2024-11-13 23:50:04
  * @description: test
  */
-'use client';
-
 import dynamic from 'next/dynamic';
 import { Spin } from 'antd';
+import Link from 'next/link';
 
 // 动态加载组件
 const UserTest = dynamic(
@@ -27,6 +26,8 @@ export default function User() {
       <UserTest>
         <div>user test slot</div>
       </UserTest>
+
+      <Link href={'/user/users'}>to users</Link>
     </div>
   );
 }

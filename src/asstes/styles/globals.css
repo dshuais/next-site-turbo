@@ -9,6 +9,10 @@
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /**
 * 设置默认滚动条样式
 */
