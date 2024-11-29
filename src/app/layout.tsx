@@ -11,6 +11,7 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import NavigationEvents from '@/components/NavigationEvents';
 import StyledComponentsRegistry from '@/lib/registry';
+import ConfigProvider from '@/layout/Provider/ConfigProvider';
 import Loading from './loading';
 
 import '../asstes/styles/globals.css';
@@ -29,7 +30,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <AntdRegistry>
           {/* 避免styled-components首屏没有样式 */}
           <StyledComponentsRegistry>
-            {children}
+            {/* antd组件主题配置 */}
+            <ConfigProvider>
+              {children}
+            </ConfigProvider>
           </StyledComponentsRegistry>
         </AntdRegistry>
 

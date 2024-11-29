@@ -5,6 +5,7 @@
  * @LastEditTime: 2024-04-23 17:56:17
  * @description: Login
  */
+import { Button } from 'antd';
 import LoginHandle from './components/LoginHandle';
 
 export default function Login() {
@@ -13,6 +14,8 @@ export default function Login() {
     <div>
       login
       <LoginHandle />
+      <Button type="primary">primary</Button>
+      <Button type="dashed">dashed</Button>
     </div>
   );
 }
